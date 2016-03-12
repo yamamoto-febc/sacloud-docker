@@ -1,11 +1,14 @@
 
-ckerfile` links
-
-[`latest`](https://github.com/yamamoto-febc/sacloud-docker)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker)
-
 # さくらのクラウドAPI CLI
 
 さくらのクラウドAPIのコマンドラインツール[`sacloud`](https://github.com/sakura-internet/node-sacloud)用イメージです。
+
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
+
+
+## `Dockerfile` links
+
+[`latest`](https://github.com/yamamoto-febc/sacloud-docker)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker)
 
 ## 使い方
 
