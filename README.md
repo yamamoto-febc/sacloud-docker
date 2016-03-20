@@ -8,9 +8,9 @@
 
 ## `Dockerfile` links
 
-[`latest`](https://github.com/yamamoto-febc/sacloud-docker/0.0.16),[`0.0.16`](https://github.com/yamamoto-febc/sacloud-docker/0.0.16)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker/0.0.16)
+[`latest`](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16),[`0.0.16`](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16)
 
-[`latest-debug`](https://github.com/yamamoto-febc/sacloud-docker/0.0.16/debug),[`0.0.16-debug`](https://github.com/yamamoto-febc/sacloud-docker/0.0.16/debug)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker/0.0.16/debug)
+[`latest-debug`](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16/debug),[`0.0.16-debug`](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16/debug)[(Dockerfile)](https://github.com/yamamoto-febc/sacloud-docker/tree/master/0.0.16/debug)
 
 **`debug`イメージはnode-debugを用いたデバッグを行える、sacloud開発者向けタグです。**
 
