@@ -21,8 +21,8 @@
 さくらのクラウドのコントロールパネルから取得しておいてください。
 ([こちらのページ](http://knowledge.sakura.ad.jp/tech/1939/2/)が参考になると思います。)
 
-* SACLOUD_ACCESS_TOKEN : アクセストークン
-* SACLOUD_ACCESS_TOKEN_SECRET : アクセストークンシークレット
+* SAKURACLOUD_ACCESS_TOKEN : アクセストークン
+* SAKURACLOUD_ACCESS_TOKEN_SECRET : アクセストークンシークレット
 * SACLOUD_REGION : リージョン(以下のいずれかを指定)
       石狩第1ゾーン : is1a
       石狩第2ゾーン : is1b
@@ -34,18 +34,18 @@
 ### 起動コマンド書式
 
 ```bash
-docker run -it --rm -e SACLOUD_ACCESS_TOKEN=アクセストークン \
-                    -e SACLOUD_ACCESS_TOKEN_SECRET=シークレット \
+docker run -it --rm -e SAKURACLOUD_ACCESS_TOKEN=アクセストークン \
+                    -e SAKURACLOUD_ACCESS_TOKEN_SECRET=シークレット \
                     -e SACLOUD_REGION=is1a  \
-                    yamamotofebc/sacloud 実行したいコマンド
+                    sacloud/cli 実行したいコマンド
 ```
 
 ### サーバ一覧取得の例
 ```bash
-docker run -it --rm -e SACLOUD_ACCESS_TOKEN=アクセストークン \
-                    -e SACLOUD_ACCESS_TOKEN_SECRET=シークレット \
+docker run -it --rm -e SAKURACLOUD_ACCESS_TOKEN=アクセストークン \
+                    -e SAKURACLOUD_ACCESS_TOKEN_SECRET=シークレット \
                     -e SACLOUD_REGION=is1a  \
-                    yamamotofebc/sacloud show server
+                    sacloud/cli show server
 ```
 sacloudコマンドの詳しい使い方は[こちら](https://github.com/sakura-internet/node-sacloud/wiki/Getting-started-Guide)を参照してください。
 
@@ -57,10 +57,10 @@ sacloudコマンドの詳しい使い方は[こちら](https://github.com/sakura
 #### docker-compose.yml
 ```docker-compose
 sacloud:
-  image: yamamotofebc/sacloud
+  image: sacloud/cli
   environment:
-    SACLOUD_ACCESS_TOKEN: "アクセストークン"
-    SACLOUD_ACCESS_TOKEN_SECRET: "シークレット"
+    SAKURACLOUD_ACCESS_TOKEN: "アクセストークン"
+    SAKURACLOUD_ACCESS_TOKEN_SECRET: "シークレット"
     SACLOUD_REGION: "is1a"
 ```
 
@@ -77,10 +77,10 @@ sacloudの開発時は以下のようなdocker-compose.ymlを用いると
 #### docker-compose.yml
 ```docker-compose
 sacloud-debug:
-  image: yamamotofebc/sacloud:latest-debug
+  image: sacloud/cli:latest-debug
   environment:
-    SACLOUD_ACCESS_TOKEN: "アクセストークン"
-    SACLOUD_ACCESS_TOKEN_SECRET: "シークレット"
+    SAKURACLOUD_ACCESS_TOKEN: "アクセストークン"
+    SAKURACLOUD_ACCESS_TOKEN_SECRET: "シークレット"
     SACLOUD_REGION: "is1a"
     SACLOUD_DEBUG_OPTIONS: "--save-live-edit"
   ports:

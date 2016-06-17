@@ -2,17 +2,17 @@
 
 set -eo pipefail
 
-if [ -z "$SACLOUD_ACCESS_TOKEN" ]; then
-  echo >&2 '$SACLOUD_ACCESS_TOKEN is not set. Please set $SACLOUD_ACCESS_TOKEN'
+if [ -z "$SAKURACLOUD_ACCESS_TOKEN" ]; then
+  echo >&2 '$SAKURACLOUD_ACCESS_TOKEN is not set. Please set $SAKURACLOUD_ACCESS_TOKEN'
   exit 1
 else
-  sacloud config --accessToken=$SACLOUD_ACCESS_TOKEN >> /dev/null 2>&1
+  sacloud config --accessToken=$SAKURACLOUD_ACCESS_TOKEN >> /dev/null 2>&1
 fi
 
-if [ -z "$SACLOUD_ACCESS_TOKEN_SECRET" ]; then
-  echo >&2 '$SACLOUD_ACCESS_TOKEN_SECRET is not set. Please set $SACLOUD_ACCESS_TOKEN_SECRET'
+if [ -z "$SAKURACLOUD_ACCESS_TOKEN_SECRET" ]; then
+  echo >&2 '$SAKURACLOUD_ACCESS_TOKEN_SECRET is not set. Please set $SAKURACLOUD_ACCESS_TOKEN_SECRET'
 else
-  sacloud config --accessTokenSecret=$SACLOUD_ACCESS_TOKEN_SECRET >> /dev/null 2>&1
+  sacloud config --accessTokenSecret=$SAKURACLOUD_ACCESS_TOKEN_SECRET >> /dev/null 2>&1
 fi
 
 if [ -z "$SACLOUD_REGION" ]; then
